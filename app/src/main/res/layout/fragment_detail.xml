@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewMOdel"
+            type="com.example.apibasic.detail.DetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/gh.avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:showImage="@{viewMOdel.item.avatar_url}"/>
+        <TextView
+            android:id="@+id/gh_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewMOdel.item.username}"/>
+        <TextView
+            android:id="@+id/gh_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewMOdel.item.bio}"/>
+
+    </LinearLayout>
+
+</layout>
